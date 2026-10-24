@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+.te-root {
+  font-family: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  color: #334155;
+  background: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+.te-root *, .te-root *::before, .te-root *::after { box-sizing: border-box; }
+.te-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+.te-brand { font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: 0.22em; }
+.te-reel-track { display: flex; align-items: flex-start; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 16px; -webkit-overflow-scrolling: touch; }
+.te-reel { flex: 0 0 auto; width: min(86vw, 340px); scroll-snap-align: start; }
+.te-reel-frame { overflow: hidden; border-radius: 16px; border: 1px solid #e2e8f0; background: #ffffff; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12); }
+.te-reel-iframe { display: block; width: 100%; height: calc(min(86vw, 340px) * 1.78 + 170px); border: 0; }
+.te-reel-video-wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; background: #000000; }
+.te-reel-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000000; }
+.te-reel-fallback { position: relative; display: block; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; color: #ffffff; text-decoration: none; }
+.te-reel-fallback-logo { position: absolute; left: 16px; top: 16px; width: 44px; height: 44px; border-radius: 9999px; overflow: hidden; }
+.te-reel-fallback-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.te-reel-fallback-body { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 24px; text-align: center; }
+.te-reel-play { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 9999px; background: rgba(255, 255, 255, 0.92); color: #1d4ed8; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s; }
+.te-reel-fallback:hover .te-reel-play { transform: scale(1.1); }
+.te-reel-fallback-title { font-size: 20px; line-height: 1.25; font-weight: 800; }
+.te-reel-link { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 600; color: #334155; text-decoration: underline; text-decoration-color: #1d4ed8; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.te-reel-link:hover { color: #1d4ed8; }
+.te-cover-0 { background-image: linear-gradient(160deg, #1e3a8a 0%, #0f172a 60%, #1d4ed8 100%); }
+.te-cover-1 { background-image: linear-gradient(200deg, #0f172a 0%, #1e293b 55%, #2563eb 100%); }
+.te-cover-2 { background-image: linear-gradient(150deg, #1d4ed8 0%, #172554 55%, #020617 100%); }
+.te-cover-3 { background-image: linear-gradient(190deg, #334155 0%, #0f172a 60%, #1e40af 100%); }
+.te-reel-chip { position: absolute; left: 12px; bottom: 12px; padding: 6px 12px; border-radius: 9999px; background: rgba(15, 23, 42, 0.78); color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.te-reel-error { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 9 / 16; padding: 24px; text-align: center; color: #475569; background: #f1f5f9; font-size: 14px; }
+.te-profile { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; aspect-ratio: 9 / 16; padding: 32px 24px; text-align: center; color: #ffffff; text-decoration: none; background-image: linear-gradient(160deg, #1e3a8a 0%, #0f172a 60%, #1d4ed8 100%); }
+.te-profile-logo { width: 104px; height: 104px; border-radius: 9999px; overflow: hidden; box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); }
+.te-profile-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.te-profile-eyebrow { margin-top: 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #bfdbfe; }
+.te-profile-handle { margin-top: 8px; font-size: 22px; font-weight: 800; }
+.te-profile-caption { margin-top: 22px; font-size: 34px; line-height: 1.15; font-style: italic; font-weight: 700; }
+.te-profile-button { display: inline-block; margin-top: 30px; padding: 14px 26px; border-radius: 9999px; background: #ffffff; color: #1d4ed8; font-size: 14px; font-weight: 700; transition: transform 0.3s; }
+.te-profile:hover .te-profile-button { transform: scale(1.05); }
+.te-quote { font-family: 'EB Garamond', 'Playfair Display', Georgia, serif; font-style: italic; }
+.te-hide-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+.te-hide-scroll::-webkit-scrollbar { display: none; }
+.te-root a:focus-visible,
+.te-root button:focus-visible,
+.te-root input:focus-visible,
+.te-root select:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 3px;
+}
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .te-root * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
