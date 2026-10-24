@@ -8,7 +8,7 @@ export default function Hero() {
       </span>
 
       <h1 className="te-serif mt-8 text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
-        <span className="te-hero-our-videos text-slate-900">Our videos =</span>{' '}
+        <span className="text-slate-900">Our videos =</span>{' '}
         <span className="font-bold italic text-blue-700">more sales.</span>
       </h1>
 
