@@ -11,6 +11,7 @@
 }
 .te-root *, .te-root *::before, .te-root *::after { box-sizing: border-box; }
 .te-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+.te-hero-our-videos { font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif; }
 .te-brand { font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: 0.22em; }
 .te-reel-track { display: flex; align-items: flex-start; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 16px; -webkit-overflow-scrolling: touch; }
 .te-reel { flex: 0 0 auto; width: min(86vw, 340px); scroll-snap-align: start; }
